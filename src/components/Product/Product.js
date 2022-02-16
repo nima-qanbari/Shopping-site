@@ -1,4 +1,8 @@
 import React from "react";
+
+//react router
+import { Link } from "react-router-dom";
+
 //styles
 import styles from "./product.module.css"
 //helper
@@ -13,7 +17,7 @@ const Product = ({ productData }) => {
       <h3>{shorten(productData.title)}</h3>
       <h4>{productData.price} $</h4>
       
-        <a href="#">بیشتر</a>
+        <Link to={`productDetail/${productData.id}`} >بیشتر</Link>
       
     </div>
   );
