@@ -19,7 +19,7 @@ const App = () => {
       <CartContextProvider>
         <Routes>
           <Route path="/" element={<Store />} />
-          <Route path="/productDetail/:id" element={<ProductDetail />} />
+          <Route path="/productDetail/:Id" element={<ProductDetail />} />
           <Route path="/notfound" element={<NotFound />} />
           <Route path="/*" element={<Navigate to="/notfound" />} />
         </Routes>

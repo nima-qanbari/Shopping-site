@@ -32,8 +32,9 @@ border-radius: 5px;
 .detailContent{
     padding: 10px;
 }
-.detailContent p{
+.price{
     margin: 10px 0;
+
 }
 
 .detailContent b{
