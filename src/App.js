@@ -12,14 +12,18 @@ import Store from './Store/Store'
 //components
 import ProductDetail from './components/ProductDetail/ProductDetail'
 import NotFound from './components/NotFound/NotFound'
+import Navbar from './components/Navbar/Navbar'
+import ShopCart from './components/ShopCart/ShopCart'
 
 const App = () => {
   return (
     <ProductContextProvider>
       <CartContextProvider>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Store />} />
           <Route path="/productDetail/:Id" element={<ProductDetail />} />
+          <Route path="/cart" element={<ShopCart />}/>
           <Route path="/notfound" element={<NotFound />} />
           <Route path="/*" element={<Navigate to="/notfound" />} />
         </Routes>

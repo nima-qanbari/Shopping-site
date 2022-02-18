@@ -10,7 +10,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 width: 900px;
-margin: 100px 30px;
+margin: 30px 30px;
 padding: 15px 10px;
 box-shadow: 0 0 12px rgb(206, 182, 182);
 background-color: #fff;
@@ -38,7 +38,7 @@ border-radius: 5px;
 }
 
 .detailContent b{
-    color: #c44846
+    color: #8a39e1
 }
 
 .buttonContainer{
@@ -52,7 +52,7 @@ border-radius: 5px;
     font: bold;
     font-size: 18px;
     color: white;
-    background-color: #710100;
+    background-color: #8a39ea;
     text-align: center;
     border-radius: 5px;
     padding: 5px 8px;
@@ -64,5 +64,5 @@ border-radius: 5px;
 }
 
 .buttonContainer button:hover{
-    background-color: #99201e;
+    background-color: #9c51e0;
 }
