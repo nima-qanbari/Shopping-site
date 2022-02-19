@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "vazir";
-  src: url("../node_modules/vazir-font/dist/font-face.css");
-}
+@import url("../node_modules/@fortawesome/fontawesome-free/css/all.min.css");
 
 *{
   margin: 0;

@@ -21,9 +21,9 @@ const App = () => {
       <CartContextProvider>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Store />} />
-          <Route path="/productDetail/:Id" element={<ProductDetail />} />
           <Route path="/cart" element={<ShopCart />}/>
+          <Route path="/productDetail/:_id" element={<ProductDetail />} />
+          <Route path="/" element={<Store />} />
           <Route path="/notfound" element={<NotFound />} />
           <Route path="/*" element={<Navigate to="/notfound" />} />
         </Routes>

@@ -1,8 +1,9 @@
 const shorten = (title) => {
-   const splitedTitle = title.split(" ")
-   const newTitle = `${splitedTitle[0]} ${splitedTitle[1]} ${splitedTitle[2]}`
+   const splitTitle = title.split(" ")
+   const newTitle = `${splitTitle[0]} ${splitTitle[1]}`
    return newTitle
 }
+
 
 const isInCart = (state, id) => {
    const result = state.selectedItems.find((item) => item.id === id)

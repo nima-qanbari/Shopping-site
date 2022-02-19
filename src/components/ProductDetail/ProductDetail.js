@@ -15,19 +15,19 @@ import { isInCart, quantityCount } from "../../helper/function";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState([]);
-  const { Id } = useParams();
-  const { image, title, price, category, description, id } = product;
+  const { _id } = useParams();
+  const { image, title, price, category, description, id} = product;
   const { state, dispatch } = useContext(cartContext);
   useEffect(() => {
-    const response = axios.get(`https://fakestoreapi.com/products/${Id}`);
-    const fetch = async () => {
-      setProduct((await response).data);
-    };
-    return fetch();
+    // const response = axios.get(`https://fakestoreapi.com/products/${Id}`);
+    // const fetch = async () => {
+    //   setProduct((await response).data);
+    // };
+    // return fetch();
 
-    // axios.get(`https://fakestoreapi.com/products/${id}`)
-    // .then((response) => setProduct(response.data))
-  }, [Id]);
+    axios.get(`https://fakestoreapi.com/products/${_id}`)
+    .then((response) => setProduct(response.data))
+  }, [_id]);
   return (
     <div className={styles.container}>
       <div className={styles.detailContainer}>
@@ -53,12 +53,12 @@ const ProductDetail = () => {
             quantityCount(state, id) > 1 && <button onClick={() => dispatch({type:"DECREASE", payload: product})}>-</button>
           }
           {
-            quantityCount(state, id) === 1 && <button onClick={() => dispatch({type:"REMOVE_ITEM", payload: product})}>remove</button>
+            quantityCount(state, id) === 1 && <button onClick={() => dispatch({type:"REMOVE_ITEM", payload: product})}><i className="fa fa-trash-can"></i></button>
           }
           
           {isInCart(state, id) ? (
             <button
-              onClick={() => dispatch({ type: "INCREASE", payload: product })}
+             className={styles.increaseBtn} onClick={() => dispatch({ type: "INCREASE", payload: product })}
             >
               +
             </button>

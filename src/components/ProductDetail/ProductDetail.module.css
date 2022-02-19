@@ -44,7 +44,7 @@ border-radius: 5px;
 .buttonContainer{
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
    
 }
 
@@ -65,4 +65,8 @@ border-radius: 5px;
 
 .buttonContainer button:hover{
     background-color: #9c51e0;
+}
+
+.increaseBtn{
+    margin:0 10px;
 }
