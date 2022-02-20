@@ -6,8 +6,11 @@ const Ul = styled.ul`
   list-style: none;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   z-index: 10;
+
+  .cart {
+    display: none;
+  }
 
   a {
     text-decoration: none;
@@ -26,6 +29,10 @@ const Ul = styled.ul`
     padding-top: 4rem;
     transition: all 0.2s linear;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+    .cart{
+      display: block;
+    }
+
     a li {
       color: #f1f1f1;
       :hover {
@@ -36,7 +43,7 @@ const Ul = styled.ul`
 
   li {
     padding: 15px 15px;
-    font-weight: bold;
+    font-size: 18px;
     cursor: pointer;
     :hover {
       background-color: rgba(48, 2, 85, 0.1);
@@ -51,6 +58,12 @@ const RightNavbar = ({ open, close }) => {
       <Ul open={open}>
         <Link to="/" onClick={close}>
           <li>صفحه اصلی</li>
+        </Link>
+        <Link className="cart" to="/cart" onClick={close}>
+          <li>سبد خرید</li>
+        </Link>
+        <Link className="cart" to="/signup" onClick={close}>
+          <li>ورود</li>
         </Link>
       </Ul>
     </div>

@@ -4,9 +4,9 @@ import Backdrop from "./Backdrop";
 import RightNavbar from "./RightNavbar";
 const Div = styled.div`
   width: 2rem;
-  height: 1.7rem;
+  height: 1.8rem;
   position: fixed;
-  top: 12px;
+  top: 13px;
   right: 20px;
   z-index: 20;
   cursor: pointer;
